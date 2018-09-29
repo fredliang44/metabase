@@ -5,6 +5,7 @@ require("babel-register");
 require("babel-polyfill");
 
 var webpack = require("webpack");
+var OfflinePlugin = require('offline-plugin');
 
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -183,6 +184,7 @@ var config = (module.exports = {
         },
       },
     }),
+    new OfflinePlugin(),
   ],
 });
 
